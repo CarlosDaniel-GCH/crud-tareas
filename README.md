@@ -9,10 +9,9 @@ El sistema permitirá:
 - Marcar tareas como completadas
 - Eliminar tareas
 
-## 1. Backend (Laravel + MySQL)
+## Backend (Laravel + MySQL)
 
-Modelo: Task
-Campos:
+### Modelo: Task
 
 - id (autoincremental)
 - title (string, obligatorio)
