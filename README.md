@@ -63,3 +63,25 @@ Para que la aplicación funcione, debes mantener ambos servicios corriendo en te
 
 - Terminal 1 (API): php artisan serve
 - Terminal 2 (Frontend): npm run dev
+
+
+## 📑 Especificaciones Técnicas
+
+### Backend (Laravel + MySQL)
+
+### Modelo: Task
+
+- id: Autoincremental.
+- title: String (Obligatorio, máx 255 caracteres).
+- description: Text (Opcional).
+- completed: Boolean (Default: false).
+- timestamps: created_at, updated_at.
+
+### API REST
+
+| Método | Endpoint | Descripción |
+| :--- | :--- | :--- |
+| **GET** | /api/tasks | Listar todas las tareas |
+| **POST** | /api/tasks | Crear una nueva tarea |
+| **PUT** | /api/tasks/{id} | Actualizar una tarea (marcar como completada) |
+| **DELETE** | /api/tasks/{id} | Eliminar una tarea |
