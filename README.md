@@ -14,7 +14,7 @@ El sistema permitirá:
 Modelo: Task
 Campos:
 
--id (autoincremental)
+- id (autoincremental)
 - title (string, obligatorio)
 - description (text, opcional)
 - completed (boolean, por defecto false)
