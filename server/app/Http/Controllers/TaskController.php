@@ -20,4 +20,22 @@ class TaskController extends Controller
 
         return $task;
     }
+
+    public function store(Request $request){
+        $validate = $request->validate([
+            'titulo' => 'required|string',
+            'descripcion' => 'nullable|string',
+            'completed' => 'required|boolean'
+        ]);
+
+        if(!$validate){
+            $data = [
+                'message' => 'Error en los tipos de datos'
+            ];
+
+            return response()->json($data, 404);
+        }
+
+        return Task::create($validate);
+    }
 }
