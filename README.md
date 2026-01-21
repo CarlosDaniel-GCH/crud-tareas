@@ -1,59 +1,65 @@
 # CRUD PARA GESTIONAR TAREAS
 
-Simulacro de entrevista tecnica que consiste en desarrollar una aplicación CRUD simple de gestión de tareas.
+Simulacro de entrevista técnica que consiste en desarrollar una aplicación CRUD simple de gestión de tareas utilizando un stack moderno.
 
-El sistema permitirá:
+El sistema permite la gestión completa del ciclo de vida de una tarea:
+* **Crear** nuevas tareas con título y descripción.
+* **Listar** todas las tareas existentes en tiempo real.
+* **Marcar** tareas como completadas/pendientes.
+* **Eliminar** tareas del sistema.
 
-- Crear tareas
-- Listar tareas
-- Marcar tareas como completadas
-- Eliminar tareas
+---
 
-## Backend (Laravel + MySQL)
+## 🛠️ Tecnologías Utilizadas
 
-### Modelo: Task
+Este proyecto ha sido desarrollado bajo la arquitectura de desacoplamiento (API Rest + SPA):
 
-- id (autoincremental)
-- title (string, obligatorio)
-- description (text, opcional)
-- completed (boolean, por defecto false)
-- created_at
-- updated_at
+| Capa | Tecnología |
+| :--- | :--- |
+| **Backend** | [Laravel 10+](https://laravel.com/) (PHP) |
+| **Frontend** | [Vue.js 3](https://vuejs.org/) (Composition API) |
+| **Base de Datos** | MySQL |
+| **Bundler** | [Vite](https://vitejs.dev/) |
+| **Cliente HTTP** | Axios |
+| **Estilos** | CSS3 Puro (Custom Properties & Flexbox) |
 
-### API REST
+---
 
-| Método | Endpoint | Descripción |
-| :--- | :--- | :--- |
-| **GET** | /api/tasks | Listar todas las tareas |
-| **POST** | /api/tasks | Crear una nueva tarea |
-| **PUT** | /api/tasks/{id} | Actualizar una tarea (marcar como completada) |
-| **DELETE** | /api/tasks/{id} | Eliminar una tarea |
+## 🚀 Instalación y Configuración
 
-### Validaciones
+Sigue estos pasos para configurar el entorno de desarrollo local:
 
-- title es obligatorio y máximo 255 caracteres
-- completed debe ser boolean
+### 1. Requisitos Previos
+* PHP >= 8.1
+* Composer
+* Node.js & NPM
+* MySQL Server
 
-### Requisitos técnicos
+### 2. Configuración del Backend (Laravel)
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/CarlosDaniel-GCH/crud-tareas.git
+cd crud-tareas
 
-- Usar Eloquent
-- Usar migraciones
-- Responder en JSON
-- Manejar errores básicos (404 si no existe la tarea)
+# 2. Instalar dependencias de PHP
+composer install
 
-## Frontend (Vue)
+# 3. Configurar archivo de entorno
+cp .env.example .env
 
-### Funcionalidades
+# 4. Generar la clave de seguridad
+php artisan key:generate
 
-- Formulario para crear una tarea
-- Listado de tareas
-- Checkbox para marcar una tarea como completada
-- Botón para eliminar tareas
+# 5. Crea la base de datos con el nombre crud-tareas y ejecuta las migraciones
+php artisan migrate
 
-### Requisitos técnicos
+# 6. Instalar dependencias de JavaScript
+npm install
+```
 
-- Usar axios o fetch para consumir la API
-- Uso de v-model
-- Uso de v-for
-- Manejo básico de estado (array de tareas)
-- Mostrar mensajes de error simples
+### 3. Ejecucion del proyecto
+
+Para que la aplicación funcione, debes mantener ambos servicios corriendo en terminales diferentes:
+
+- Terminal 1 (API): php artisan serve
+- Terminal 2 (Frontend): npm run dev
