@@ -46,13 +46,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400px; 
+  text-align: left;
+  width: 500px; 
   height: 80px;
   margin: 15px auto; 
   padding: 0 25px;
   background-color: #343434;
   border-radius: 12px;
-  border-left: 3px solid #4a90e2;
+  border-left: 3px solid #3fb984;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
@@ -96,7 +97,7 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #4a90e2;
+  accent-color: #3fb984;
 }
 
 /* Botón Eliminar con estilo moderno */
@@ -115,7 +116,6 @@ button {
 button:hover {
   background-color: #dc3545;
   color: white;
-  box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
 }
 
 /* FORMULARIOs*/
@@ -172,13 +172,13 @@ input[type="input"] {
 
 input[type="input"]:focus {
   outline: none;
-  border-color: #4a90e2;
+  border-color: #3fb984;
   box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
 
 /* Botón de Agregar Tarea */
 button:not(.close-modal) {
-  background-color: #4a90e2;
+  background-color: #3fb984;
   color: white;
   padding: 10px;
   border: none;
@@ -190,7 +190,7 @@ button:not(.close-modal) {
 }
 
 button:not(.close-modal):hover {
-  background-color: #357abd;
+  background-color: #31a070;
 }
 
 button:not(.close-modal):active {
